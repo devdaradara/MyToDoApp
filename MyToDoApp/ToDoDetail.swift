@@ -12,15 +12,8 @@ struct ToDoDetail: View {
     var body: some View {
         Form {
             Section(header: Text("Tasks Detail")) {
-                
-                VStack {
-                    Text(selectedToDo.category)
-                        .font(.headline)
-                    Image(systemName: selectedToDo.categoryImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding()
-                }
+              
+                ImageView(selectedToDo: $selectedToDo)
                 
                 Text(selectedToDo.title)
                     .font(.headline)
@@ -72,6 +65,45 @@ struct CompleteSetting: View {
                     }
                     
                 }
+        }
+    }
+}
+
+
+struct ImageView: View {
+    
+    @Binding var selectedToDo: ToDo
+    @State private var showingImagePicker = false
+    @State var pickedImage: Image?
+    
+    var body: some View {
+        
+        VStack {
+            Text(selectedToDo.category)
+                .font(.headline)
+            
+            if selectedToDo.isDone {
+                pickedImage?.resizable()
+                    .frame(height:300)
+                    .clipped()
+            } else {
+                Image(systemName: selectedToDo.categoryImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding()
+            }
+            
+            Button(action: {
+                self.showingImagePicker.toggle()
+            }, label: {
+                Image(systemName: "plus")
+                    .foregroundColor(.blue)
+            }).sheet(isPresented: $showingImagePicker) {
+                ImagePicker(sourceType: .photoLibrary) { (image) in
+                    self.pickedImage = Image(uiImage: image)
+                }
+            }
+            
         }
     }
 }

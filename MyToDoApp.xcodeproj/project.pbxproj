@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		770E61662994D26D003DC147 /* AddNewToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E61652994D26D003DC147 /* AddNewToDo.swift */; };
+		772E926A2996C14200982112 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E92692996C14200982112 /* ImagePicker.swift */; };
 		77318A672994924F00C915CB /* MyToDoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77318A662994924F00C915CB /* MyToDoAppApp.swift */; };
 		77318A692994924F00C915CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77318A682994924F00C915CB /* ContentView.swift */; };
 		77318A6B2994925100C915CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77318A6A2994925100C915CB /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		770E61652994D26D003DC147 /* AddNewToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDo.swift; sourceTree = "<group>"; };
 		772E92682996ABD300982112 /* ListNavDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListNavDemo.entitlements; sourceTree = "<group>"; };
+		772E92692996C14200982112 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		77318A632994924F00C915CB /* ListNavDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListNavDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77318A662994924F00C915CB /* MyToDoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToDoAppApp.swift; sourceTree = "<group>"; };
 		77318A682994924F00C915CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				77318A8029949A5A00C915CB /* ToDoStore.swift */,
 				77318A682994924F00C915CB /* ContentView.swift */,
 				77318A822994CA7A00C915CB /* ToDoDetail.swift */,
+				772E92692996C14200982112 /* ImagePicker.swift */,
 				770E61652994D26D003DC147 /* AddNewToDo.swift */,
 				77318A6A2994925100C915CB /* Assets.xcassets */,
 				77318A78299493F200C915CB /* toDoData.json */,
@@ -167,6 +170,7 @@
 				770E61662994D26D003DC147 /* AddNewToDo.swift in Sources */,
 				77318A672994924F00C915CB /* MyToDoAppApp.swift in Sources */,
 				77318A832994CA7A00C915CB /* ToDoDetail.swift in Sources */,
+				772E926A2996C14200982112 /* ImagePicker.swift in Sources */,
 				77318A7B299494F600C915CB /* ToDo.swift in Sources */,
 				77318A8129949A5A00C915CB /* ToDoStore.swift in Sources */,
 			);

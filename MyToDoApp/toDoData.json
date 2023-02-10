@@ -2,7 +2,7 @@
     {
         "id": "1",
         "title": "Swift Coding",
-        "isDone": true,
+        "isDone": false,
         "category": "Programming",
         "categoryImage": "desktopcomputer.trianglebadge.exclamationmark",
         "description": "Make Swift Coding To Do App",
@@ -11,7 +11,7 @@
     {
         "id": "2",
         "title": "LOL",
-        "isDone": false,
+        "isDone": true,
         "category": "Game",
         "categoryImage": "gamecontroller",
         "description": "Gold.... Gold....",
@@ -20,7 +20,7 @@
     {
         "id": "3",
         "title": "Jinu's Birth Day",
-        "isDone": false,
+        "isDone": true,
         "category": "Promise",
         "categoryImage": "person.3",
         "description": "Swift Coding Club",
