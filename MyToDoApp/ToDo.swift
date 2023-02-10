@@ -14,4 +14,6 @@ struct ToDo : Codable, Identifiable {
     var categoryImage: String
     
     var description: String
+    
+    var alertTime: String
 }

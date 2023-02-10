@@ -10,7 +10,7 @@
 - 제목(title): String
 - 수행 유무(isDone): Bool(Toggle)
 - 카테고리(category) :String
--카테고리 이미지(categoryImage): String
+- 카테고리 이미지(categoryImage): String
 - 상세설명(description) : String
 {
 - 세부사항

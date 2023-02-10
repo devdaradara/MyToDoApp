@@ -14,6 +14,7 @@ struct AddNewToDo: View {
     @State var category: String = ""
     @State var categoryImage: String = ""
     @State var description: String = ""
+    @State var date: Date = Date()
     
     var body: some View {
         Form {
@@ -21,11 +22,9 @@ struct AddNewToDo: View {
                 DataInput(title:"Task Title", userInput: $title)
                 DataInput(title: "Description", userInput: $description)
                 
-                PickerView(category: $category)
+                PickerCategory(category: $category)
                 
-                Toggle(isOn: $isDone) {
-                    Text("Complete").font(.headline)
-                }.padding()
+                PickerDate(date: $date)
             }
             
             Button(action: addNewToDo) {
@@ -36,12 +35,7 @@ struct AddNewToDo: View {
     }
     
     func addNewToDo() {
-        let newToDo = ToDo(id: UUID().uuidString,
-                           title: title,
-                           isDone: isDone,
-                           category: category,
-                           categoryImage: selectImage(),
-                           description: description)
+        let newToDo = ToDo(id: UUID().uuidString, title: title, isDone: isDone, category: category, categoryImage: selectImage(), description: description, alertTime: dateToString(date: date))
                 
         toDoStore.toDos.append(newToDo)
     }
@@ -60,9 +54,32 @@ struct AddNewToDo: View {
         return categoryImages
     }
     
+    func dateToString(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let dateString = dateFormatter.string(from: date)
+        return dateString
+    }
 }
- 
-struct PickerView: View {
+
+struct DataInput: View {
+    
+    var title: String
+    @Binding var userInput: String
+    
+    var body: some View {
+        VStack(alignment: HorizontalAlignment.leading) {
+            Text(title)
+                .font(.headline)
+            TextField("Enter \(title)", text: $userInput)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+        }
+        .padding()
+    }
+    
+}
+
+struct PickerCategory: View {
     
     @Binding var category: String
     let categoryNames = ["Study","Coding", "Game", "Promise"]
@@ -88,22 +105,21 @@ struct PickerView: View {
     
 }
 
-
-struct DataInput: View {
+struct PickerDate: View {
     
-    var title: String
-    @Binding var userInput: String
+    @Binding var date: Date
     
     var body: some View {
-        VStack(alignment: HorizontalAlignment.leading) {
-            Text(title)
+        VStack {
+            Text("Date")
                 .font(.headline)
-            TextField("Enter \(title)", text: $userInput)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .multilineTextAlignment(.leading)
+            DatePicker("Date", selection: $date)
+                .datePickerStyle(GraphicalDatePickerStyle())
+                .frame(maxHeight: 400)
         }
         .padding()
     }
-    
 }
 
 struct AddNewToDo_Preview: PreviewProvider {

@@ -28,35 +28,11 @@ struct ToDoDetail: View {
                 Text(selectedToDo.description)
                     .font(.body)
                 
-                HStack {
-                    Text("Complete")
-                        .font(.body)
-                        Spacer()
-                    Image(systemName: selectedToDo.isDone ?
-                          "checkmark.circle" : "xmark.circle")
-                    .foregroundColor(selectedToDo.isDone ? .green : .red)
-                    .contextMenu {
-                        Button(action: {
-                            selectedToDo.isDone = true
-                        }) {
-                            Text("Mission Complete")
-                            Image(systemName: "checkmark.circle")
-                                .foregroundColor(.green)
-                        }
-                        
-                        Button(action: {
-                            selectedToDo.isDone = false
-                        }) {
-                            Text("Mission Incomplete")
-                            Image(systemName: "xmark.circle")
-                                .foregroundColor(.red)
-                        }
-                        
-                    }
-                }
+                Text(selectedToDo.alertTime)
+                
+                CompleteSetting(selectedToDo: $selectedToDo)
             }
         }
-        .navigationBarItems(trailing: EditButton())
     }
     
 }
@@ -64,5 +40,38 @@ struct ToDoDetail: View {
 struct CarDetail_Previews: PreviewProvider {
     static var previews: some View {
         ToDoDetail(selectedToDo: toDoData[0])
+    }
+}
+
+struct CompleteSetting: View {
+    
+    @Binding var selectedToDo: ToDo
+    
+    var body: some View {
+        HStack {
+            Text("Complete")
+                .font(.body)
+            Spacer()
+            Image(systemName: selectedToDo.isDone ? "checkmark.circle" : "xmark.circle")
+                .foregroundColor(selectedToDo.isDone ? .green : .red)
+                .contextMenu {
+                    Button(action: {
+                        selectedToDo.isDone = true
+                    }) {
+                        Text("Mission Complete 👍")
+                        Image(systemName: "checkmark.circle")
+                            .foregroundColor(.green)
+                    }
+                    
+                    Button(action: {
+                        selectedToDo.isDone = false
+                    }) {
+                        Text("Mission Incomplete 👊")
+                        Image(systemName: "xmark.circle")
+                            .foregroundColor(.red)
+                    }
+                    
+                }
+        }
     }
 }

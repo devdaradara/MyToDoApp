@@ -22,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		770E61652994D26D003DC147 /* AddNewToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDo.swift; sourceTree = "<group>"; };
+		772E92682996ABD300982112 /* ListNavDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListNavDemo.entitlements; sourceTree = "<group>"; };
 		77318A632994924F00C915CB /* ListNavDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListNavDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77318A662994924F00C915CB /* MyToDoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToDoAppApp.swift; sourceTree = "<group>"; };
 		77318A682994924F00C915CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		77318A5A2994924F00C915CB = {
 			isa = PBXGroup;
 			children = (
+				772E92682996ABD300982112 /* ListNavDemo.entitlements */,
 				777F324D299557F400EE7493 /* Plan */,
 				77318A652994924F00C915CB /* MyToDoApp */,
 				77318A642994924F00C915CB /* Products */,
@@ -294,6 +296,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ListNavDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyToDoApp/Preview Content\"";
@@ -323,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ListNavDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyToDoApp/Preview Content\"";
