@@ -7,18 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		77318A672994924F00C915CB /* ListNavDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77318A662994924F00C915CB /* ListNavDemoApp.swift */; };
+		770E61662994D26D003DC147 /* AddNewToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E61652994D26D003DC147 /* AddNewToDo.swift */; };
+		77318A672994924F00C915CB /* MyToDoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77318A662994924F00C915CB /* MyToDoAppApp.swift */; };
 		77318A692994924F00C915CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77318A682994924F00C915CB /* ContentView.swift */; };
 		77318A6B2994925100C915CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77318A6A2994925100C915CB /* Assets.xcassets */; };
 		77318A6E2994925100C915CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77318A6D2994925100C915CB /* Preview Assets.xcassets */; };
+		77318A79299493F200C915CB /* toDoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 77318A78299493F200C915CB /* toDoData.json */; };
+		77318A7B299494F600C915CB /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77318A7A299494F600C915CB /* ToDo.swift */; };
+		77318A7D2994976700C915CB /* ToDoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77318A7C2994976700C915CB /* ToDoData.swift */; };
+		77318A8129949A5A00C915CB /* ToDoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77318A8029949A5A00C915CB /* ToDoStore.swift */; };
+		77318A832994CA7A00C915CB /* ToDoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77318A822994CA7A00C915CB /* ToDoDetail.swift */; };
+		777F324E299557F400EE7493 /* Plan in Resources */ = {isa = PBXBuildFile; fileRef = 777F324D299557F400EE7493 /* Plan */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		770E61652994D26D003DC147 /* AddNewToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDo.swift; sourceTree = "<group>"; };
 		77318A632994924F00C915CB /* ListNavDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListNavDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		77318A662994924F00C915CB /* ListNavDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNavDemoApp.swift; sourceTree = "<group>"; };
+		77318A662994924F00C915CB /* MyToDoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToDoAppApp.swift; sourceTree = "<group>"; };
 		77318A682994924F00C915CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		77318A6A2994925100C915CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77318A6D2994925100C915CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		77318A78299493F200C915CB /* toDoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = toDoData.json; sourceTree = "<group>"; };
+		77318A7A299494F600C915CB /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		77318A7C2994976700C915CB /* ToDoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoData.swift; sourceTree = "<group>"; };
+		77318A8029949A5A00C915CB /* ToDoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoStore.swift; sourceTree = "<group>"; };
+		77318A822994CA7A00C915CB /* ToDoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetail.swift; sourceTree = "<group>"; };
+		777F324D299557F400EE7493 /* Plan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Plan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +49,8 @@
 		77318A5A2994924F00C915CB = {
 			isa = PBXGroup;
 			children = (
-				77318A652994924F00C915CB /* ListNavDemo */,
+				777F324D299557F400EE7493 /* Plan */,
+				77318A652994924F00C915CB /* MyToDoApp */,
 				77318A642994924F00C915CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,15 +63,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		77318A652994924F00C915CB /* ListNavDemo */ = {
+		77318A652994924F00C915CB /* MyToDoApp */ = {
 			isa = PBXGroup;
 			children = (
-				77318A662994924F00C915CB /* ListNavDemoApp.swift */,
+				77318A662994924F00C915CB /* MyToDoAppApp.swift */,
+				77318A7A299494F600C915CB /* ToDo.swift */,
+				77318A7C2994976700C915CB /* ToDoData.swift */,
+				77318A8029949A5A00C915CB /* ToDoStore.swift */,
 				77318A682994924F00C915CB /* ContentView.swift */,
+				77318A822994CA7A00C915CB /* ToDoDetail.swift */,
+				770E61652994D26D003DC147 /* AddNewToDo.swift */,
 				77318A6A2994925100C915CB /* Assets.xcassets */,
+				77318A78299493F200C915CB /* toDoData.json */,
 				77318A6C2994925100C915CB /* Preview Content */,
 			);
-			path = ListNavDemo;
+			path = MyToDoApp;
 			sourceTree = "<group>";
 		};
 		77318A6C2994925100C915CB /* Preview Content */ = {
@@ -102,7 +123,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 77318A5E2994924F00C915CB /* Build configuration list for PBXProject "ListNavDemo" */;
+			buildConfigurationList = 77318A5E2994924F00C915CB /* Build configuration list for PBXProject "MyToDoApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -125,7 +146,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77318A79299493F200C915CB /* toDoData.json in Resources */,
 				77318A6E2994925100C915CB /* Preview Assets.xcassets in Resources */,
+				777F324E299557F400EE7493 /* Plan in Resources */,
 				77318A6B2994925100C915CB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77318A7D2994976700C915CB /* ToDoData.swift in Sources */,
 				77318A692994924F00C915CB /* ContentView.swift in Sources */,
-				77318A672994924F00C915CB /* ListNavDemoApp.swift in Sources */,
+				770E61662994D26D003DC147 /* AddNewToDo.swift in Sources */,
+				77318A672994924F00C915CB /* MyToDoAppApp.swift in Sources */,
+				77318A832994CA7A00C915CB /* ToDoDetail.swift in Sources */,
+				77318A7B299494F600C915CB /* ToDo.swift in Sources */,
+				77318A8129949A5A00C915CB /* ToDoStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +223,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MyToDoApp;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -249,6 +278,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MyToDoApp;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -266,7 +296,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ListNavDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyToDoApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 9K6KAXQBG7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,7 +310,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.daradara.ListNavDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daradara.AnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -295,7 +325,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ListNavDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyToDoApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 9K6KAXQBG7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -309,7 +339,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.daradara.ListNavDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daradara.AnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,7 +350,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		77318A5E2994924F00C915CB /* Build configuration list for PBXProject "ListNavDemo" */ = {
+		77318A5E2994924F00C915CB /* Build configuration list for PBXProject "MyToDoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77318A6F2994925100C915CB /* Debug */,

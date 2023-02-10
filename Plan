@@ -1,0 +1,45 @@
+# Functions
+
+## 기본 기능
+- 추가
+- 삭제
+- 수정
+
+## Task
+- 아이디(id) : Int
+- 제목(title): String
+- 수행 유무(isDone): Bool(Toggle)
+- 카테고리(category) :String
+-카테고리 이미지(categoryImage): String
+- 상세설명(description) : String
+{
+- 세부사항
+    - 날짜
+    - 시간
+    - 태그
+    - 위치
+    - 우선순위
+    - 이미지 추가
+    - url
+}
+
+### 카테고리
+- Study(공부) : books.vertical
+- Game(게임) : gamecontroller
+- Coding(코딩) : desktopcomputer.trianglebadge.exclamationmark
+- Promise(약속) : person.3
+
+
+### 추가
+- JSon으로 데이터 저장
+
+### 삭제
+- Edit으로 삭제
+- 밀기
+
+### 수정
+-
+
+## 추가 기능
+- 사진을 올려야 완료로 변경 가능
+- 시간 저장해서 알람
