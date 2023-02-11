@@ -15,7 +15,6 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            
             List {
                 Section(header: Text("Settings")
                     .fontWeight(.bold)
