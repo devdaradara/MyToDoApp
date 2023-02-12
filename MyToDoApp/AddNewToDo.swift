@@ -122,8 +122,3 @@ struct PickerDate: View {
     }
 }
 
-struct AddNewToDo_Preview: PreviewProvider {
-    static var previews: some View {
-        AddNewToDo(toDoStore: ToDoStore(toDos: toDoData))
-    }
-}

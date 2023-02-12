@@ -8,6 +8,7 @@ import SwiftUI
 struct ToDoDetail: View {
     
     @State var selectedToDo: ToDo
+    @State var isEditMode = false // Add edit mode state
     
     var body: some View {
         Form {
@@ -24,16 +25,19 @@ struct ToDoDetail: View {
                 Text(selectedToDo.alertTime)
                 
                 CompleteSetting(selectedToDo: $selectedToDo)
+                
+                Button(action: {
+                    self.isEditMode = true
+                }) {
+                    Text("Edit")
+                }
             }
+        }
+        .sheet(isPresented: $isEditMode) {
+            ToDoEdit(selectedToDo: $selectedToDo, isPresented: $isEditMode)
         }
     }
     
-}
-
-struct CarDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        ToDoDetail(selectedToDo: toDoData[0])
-    }
 }
 
 struct ImageView: View {
@@ -69,7 +73,6 @@ struct ImageView: View {
                     self.pickedImage = Image(uiImage: image)
                 }
             }
-            
         }
     }
 }
@@ -105,4 +108,54 @@ struct CompleteSetting: View {
                 }
         }
     }
+}
+
+
+//Trailing closure passed to parameter of type 'FormStyleConfiguration' that does not accept a closure
+// iOS 15에서는 Form의 생성자에 trailing closure를 전달할 수 없어 생기는 문제
+struct ToDoEdit: View {
+    
+    @Binding var selectedToDo: ToDo
+    @Binding var isPresented: Bool
+    
+    var body: some View {
+        NavigationView {
+            
+            Form {
+                Group {
+                    Section(header: Text("Tasks Detail")) {
+                        ImageView(selectedToDo: $selectedToDo)
+                        TextField("Title", text: $selectedToDo.title)
+                        TextField("Description", text: $selectedToDo.description)
+                        DatePicker("Alert Time", selection: Binding(
+                            get: { stringToDate(selectedToDo.alertTime) },
+                            set: { selectedToDo.alertTime = dateToString($0) }
+                        ), displayedComponents: .date)
+                    }
+                
+                    Section {
+                        Button(action: {
+                            self.isPresented = false
+                        }) {
+                            Text("Save")
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Edit Task")
+        }
+    }
+    
+    func stringToDate(_ date: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        return dateFormatter.date(from: date)!
+    }
+    
+    func dateToString(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        return dateFormatter.string(from: date)
+    }
+    
 }
